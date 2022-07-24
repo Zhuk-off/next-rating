@@ -1,11 +1,17 @@
-import Image from 'next/image';
-import { Button, Htag, P } from '../components';
+import { useState } from 'react';
+import { Button, Htag, P, Rating, Tag } from '../components';
 
 export default function Home(): JSX.Element {
+  const [conter, setCounter] = useState<number>(0);
+  const [rating, setRating] = useState<number>(2);
   return (
     <>
-      <Htag tag="h1">Подключенный шрифт</Htag>
-      <Button arrow="none" appearance="primary">
+      <Htag tag="h1">{conter}</Htag>
+      <Button
+        arrow="none"
+        appearance="primary"
+        onClick={() => setCounter((x) => x + 1)}
+      >
         Кнопка
       </Button>
       <Button arrow="right" appearance="ghost" className="fadfdsafd">
@@ -14,6 +20,16 @@ export default function Home(): JSX.Element {
       <P style={{ color: 'red' }} size="large">
         Красный параграф
       </P>
+      <Tag size="small" color="green">
+        Tag
+      </Tag>
+      <Tag size="small" color="grey">
+        Tag
+      </Tag>
+      <Tag size="small" color="primary">
+        Tag
+      </Tag>
+      <Rating rating={rating} isEditable={true} setRating={setRating} />
     </>
   );
 }
