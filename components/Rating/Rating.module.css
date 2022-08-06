@@ -15,3 +15,21 @@
 .display {
 	display: inline-block;
 }
+
+.error svg {
+	stroke: var(--red);
+}
+
+.ratingWrapper {
+	position: relative;
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -17px;
+	left: 2px;
+
+	white-space: nowrap;
+
+	color: var(--red);
+}
