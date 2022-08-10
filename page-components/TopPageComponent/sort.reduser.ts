@@ -1,15 +1,11 @@
 import { SortEnum } from '../../components/Sort/Sort.props';
 import { IProductModel } from '../../interfaces/product.interface';
 
-// потому что пейлоады могут быть другими, поэтому я разнес так
-// могли бы задать как
-// export type SortActions = { type: SortEnum};
 export type SortActions =
   | { type: SortEnum.Price }
   | { type: SortEnum.Rating }
   | { type: 'reset'; initialState: IProductModel[] };
 
-// должна храниться сама сортировка, потому что нам по этой сортировке дальше в компоненте отобраажть текущее состояние
 export interface SortReducerState {
   sort: SortEnum;
   products: IProductModel[];
