@@ -6,6 +6,7 @@ import { Footer } from './Footer/Footer';
 import React, { FunctionComponent } from 'react';
 import { AppContextProvider, IAppContext } from '../context/app.context';
 import { IMenuItem } from '../interfaces/menu.interface';
+import { Up } from '../components';
 
 const Layout = ({ children }: ILayoutProps): JSX.Element => {
   return (
@@ -14,6 +15,7 @@ const Layout = ({ children }: ILayoutProps): JSX.Element => {
       <Sidebar className={styles.sidebar} />
       <div className={styles.body}>{children}</div>
       <Footer className={styles.footer} />
+      <Up />
     </div>
   );
 };
