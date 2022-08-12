@@ -4,6 +4,10 @@
 	transition: all 0.1s;
 }
 
+.star {
+	display: inline-block;
+}
+
 .star svg {
 	margin-right: 5px;
 }
