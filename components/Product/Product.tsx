@@ -32,8 +32,8 @@ export const Product = motion(
       };
 
       const variantsMotion = {
-        visible: { visibility: 'visible', opacity: 1, height: 'auto' },
-        hidden: { visibility: 'hidden', opacity: 0, height: 0 },
+        visible: { opacity: 1, height: 'auto' },
+        hidden: { opacity: 0, height: 0 },
       };
 
       return (
@@ -119,6 +119,10 @@ export const Product = motion(
             </div>
           </Card>
           <motion.div
+            className={cn(className, {
+              [styles.reviewsClose]: isReviewOpened == false,
+              [styles.reviewsOpen]: isReviewOpened == true,
+            })}
             layout
             variants={variantsMotion}
             initial={'hidden'}
