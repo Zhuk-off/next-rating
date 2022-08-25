@@ -22,6 +22,7 @@ export const Menu = (): JSX.Element => {
     },
     hidden: { marginBottom: 0 },
   };
+
   const variantsMotionChildren = {
     visible: {
       opacity: 1,

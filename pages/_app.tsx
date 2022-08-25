@@ -6,9 +6,9 @@ import { YMInitializer } from 'react-yandex-metrika';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
 
-Router.events.on('routeChangeComplete', (url: string) => {
-  useEffect(() => ym('hit', url), []);
-});
+// Router.events.on('routeChangeComplete', (url: string) => {
+//   useEffect(() => ym('hit', url), []);
+// });
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   return (
@@ -25,11 +25,11 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         ></meta>
         <meta property="og:locale" content="ru_RU"></meta>
       </Head>
-      <YMInitializer
+      {/* <YMInitializer
         accounts={[]}
         options={{ webvizor: true, defer: true }}
         version="2"
-      />
+      /> */}
       <Component {...pageProps} />
     </>
   );

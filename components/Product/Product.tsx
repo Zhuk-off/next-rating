@@ -32,8 +32,8 @@ export const Product = motion(
       };
 
       const variantsMotion = {
-        visible: { opacity: 1, height: 'auto' },
-        hidden: { opacity: 0, height: 0 },
+        visible: { visibility: 'visible', opacity: 1, height: 'auto' },
+        hidden: { visibility: 'hidden', opacity: 0, height: 0 },
       };
 
       return (

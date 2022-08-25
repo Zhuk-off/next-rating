@@ -1,5 +1,5 @@
 import styles from './TopPageComponent.module.css';
-import { ITopPageComponentProps } from './TopPageComponenet.props';
+import { ITopPageComponentProps } from './TopPageComponent.props';
 import { Advantages, HhData, Htag, Product, Sort, Tag } from '../../components';
 import { TopLevelCategory } from '../../interfaces/page.interface';
 import { SortEnum } from '../../components/Sort/Sort.props';

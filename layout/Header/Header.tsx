@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export const Header = ({ className, ...props }: IHeaderProps): JSX.Element => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -33,7 +34,11 @@ export const Header = ({ className, ...props }: IHeaderProps): JSX.Element => {
   };
   return (
     <header className={cn(className, styles.header)} {...props}>
-      <Logo />
+      <Link href={`/`}>
+        <a>
+          <Logo />
+        </a>
+      </Link>
       <ButtonIcon
         appearance="white"
         icon="menu"
