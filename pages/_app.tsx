@@ -1,10 +1,10 @@
 import { AppProps } from 'next/dist/shared/lib/router/router';
 import Head from 'next/head';
 import '../styles/globals.css';
-import ym from 'react-yandex-metrika';
-import { YMInitializer } from 'react-yandex-metrika';
-import Router from 'next/router';
-import { useEffect, useState } from 'react';
+// import ym from 'react-yandex-metrika';
+// import { YMInitializer } from 'react-yandex-metrika';
+// import Router from 'next/router';
+// import { useEffect, useState } from 'react';
 
 // Router.events.on('routeChangeComplete', (url: string) => {
 //   useEffect(() => ym('hit', url), []);

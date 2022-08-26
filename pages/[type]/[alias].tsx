@@ -57,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   };
 };
 
@@ -95,6 +95,7 @@ export const getStaticProps: GetStaticProps<ITopPageProps> = async ({
         page,
         products,
       },
+      revalidate: 20,
     };
   } catch (error) {
     return { notFound: true };

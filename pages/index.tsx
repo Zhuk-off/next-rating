@@ -6,7 +6,7 @@ import { API } from '../helpers/api';
 import { firstLevelMenu } from '../helpers/helpers';
 import { MainPageComponent } from '../page-components';
 
-function Home({ menu }: IHomeProps): JSX.Element {
+function Home(): JSX.Element {
   return (
     <>
       <MainPageComponent firstLevelMenu={firstLevelMenu} />

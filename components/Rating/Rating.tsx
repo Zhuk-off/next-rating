@@ -24,9 +24,13 @@ export const Rating = forwardRef(
     }: IRatingProps,
     ref: ForwardedRef<HTMLDivElement>
   ): JSX.Element => {
-    const [ratingArray, setRatingArray] = useState<JSX.Element[]>(
-      new Array(5).fill(<></>)
-    );
+    const [ratingArray, setRatingArray] = useState<JSX.Element[]>([
+      <></>,
+      <></>,
+      <></>,
+      <></>,
+      <></>,
+    ]);
 
     const ratingArrayRef = useRef<(HTMLSpanElement | null)[]>([]);
 
@@ -114,7 +118,6 @@ export const Rating = forwardRef(
       >
         {ratingArray.map((r, i) => (
           <span key={i} className={styles.display}>
-            {' '}
             {r}
           </span>
         ))}

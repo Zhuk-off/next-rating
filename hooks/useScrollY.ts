@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 export const useScrollY = (): number => {
   const [isBrouser, setIsBrouser] = useState<boolean>(false);
   useEffect(() => setIsBrouser(true), []);
-  // const isBrouser = typeof window !== 'undefined';
 
   const [scrollY, setScrollY] = useState<number>(0);
 
