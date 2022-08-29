@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   return (
     <>
       <Head>
-        <title>MyTop - наш лучший топ</title>
+        <title>Rating - рейтеинги</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

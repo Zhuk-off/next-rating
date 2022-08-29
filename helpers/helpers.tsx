@@ -2,7 +2,7 @@ import CoursesIcon from './icons/courses.svg';
 import BooksIcon from './icons/books.svg';
 import ProductsIcon from './icons/products.svg';
 import ServicesIcon from './icons/services.svg';
-import { TopLevelCategory } from '../interfaces/page.interface';
+import { ITopPageModel, TopLevelCategory } from '../interfaces/page.interface';
 import { IFirstLevelMenuItem } from '../interfaces/menu.interface';
 
 export const firstLevelMenu: IFirstLevelMenuItem[] = [
@@ -48,4 +48,19 @@ export const declOfNum = (
       ? 2
       : cases[number % 10 < 5 ? number % 10 : 5]
   ];
+};
+
+export const searchPage: ITopPageModel = {
+  tags: ['поиск'],
+  _id: '6068cc76d084b85d3f1abf56sfsfss000',
+  secondCategory: 'Поиск',
+  alias: 'search',
+  title: 'Найдено:',
+  category: 'Поиск',
+  tagsTitle: 'Поиск',
+  metaTitle: 'Лучшие курсы',
+  metaDescription: 'Рейтинг лучших курсов',
+  firstCategory: 0,
+  createdAt: new Date(),
+  updatedAt: new Date(),
 };

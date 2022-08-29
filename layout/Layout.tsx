@@ -21,7 +21,7 @@ const Layout = ({ children }: ILayoutProps): JSX.Element => {
   const skipContentAction = (key: KeyboardEvent) => {
     if (key.code == 'Space' || key.code == 'Enter') {
       key.preventDefault();
-      bodyRef.current?.focus(); // мы можем зафорсить фокусирование этого элемента
+      bodyRef.current?.focus();
     }
     setIsSkipLinkDisplayed(false);
   };

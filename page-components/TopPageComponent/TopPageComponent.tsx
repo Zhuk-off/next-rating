@@ -40,7 +40,13 @@ export const TopPageComponent = ({
       </div>
       <div>
         {sortedProducts &&
-          sortedProducts.map((p) => <Product layout product={p} key={p._id} />)}
+          sortedProducts.map((p) => (
+            <Product
+              layout
+              product={p}
+              key={p._id + Math.random().toString()}
+            />
+          ))}
       </div>
       <div className={styles.hhTitle}>
         <Htag tag="h2">Вакансии - {page.category}</Htag>

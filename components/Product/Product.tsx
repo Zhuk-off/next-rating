@@ -12,6 +12,7 @@ import React, { useState, useRef, forwardRef, ForwardedRef } from 'react';
 import { Review } from '../Review/Review';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export const Product = motion(
   forwardRef(
@@ -21,7 +22,6 @@ export const Product = motion(
     ): JSX.Element => {
       const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
       const reviewRef = useRef<HTMLDivElement>(null);
-
       const scrollToReview = () => {
         setIsReviewOpened(true);
         reviewRef.current?.scrollIntoView({
@@ -41,7 +41,11 @@ export const Product = motion(
           <Card className={styles.product}>
             <div className={styles.logo}>
               <Image
-                src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
+                src={
+                  product.image.includes('http://')
+                    ? '/'
+                    : process.env.NEXT_PUBLIC_DOMAIN + product.image
+                }
                 alt={product.title}
                 width={70}
                 height={70}
@@ -107,7 +111,11 @@ export const Product = motion(
             </div>
             <Divider className={cn(styles.hr, styles.hr2)} />
             <div className={styles.actions}>
-              <Button appearance="primary">Узнать подробнее</Button>
+              <Link href={product.link}>
+                <a>
+                  <Button appearance="primary">Узнать подробнее</Button>
+                </a>
+              </Link>
               <Button
                 appearance="ghost"
                 arrow={isReviewOpened ? 'down' : 'right'}
